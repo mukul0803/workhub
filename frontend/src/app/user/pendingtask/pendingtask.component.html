@@ -1,0 +1,23 @@
+<div class="alltasks">
+
+    <div class="heading">
+        <h6>Pending Tasks</h6>
+    </div>
+
+    <table>
+        <tr>
+            <th>Task Name</th>
+            <th>Starting Date</th>
+            <th>End Date</th>
+            <th>Deadline</th>
+            <th>Status</th>
+        </tr>
+        <tr *ngFor="let task of details" (click)="gettaskid(task._id)">
+            <td> {{task.taskName}} </td>
+            <td> {{task.taskStartDate | date:'dd/MM/yyyy'}} </td>
+            <td> {{task.taskEndDate  | date:'dd/MM/yyyy'}} </td>
+            <td> {{task.deadline  | date:'dd/MM/yyyy'}} </td>
+            <td> {{task.status}} </td>
+        </tr>
+    </table>
+</div>

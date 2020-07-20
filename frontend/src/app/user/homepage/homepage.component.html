@@ -1,0 +1,72 @@
+<!-- Home Page -->
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12 home-box">
+
+            <div class="col-md-12 taskTab">
+                <!-- Task Title -->
+                <div class="col-md-2 task-title">
+                    <div class="task-head">
+                        <h6>Hello! {{auth.getUserDetails().name}}</h6>
+                        <!-- <input type="text" placeholder="Search"> -->
+                    </div>
+                    <hr class="hrColor" />
+                    <ul>
+                        <!-- <a href="#" routerLink="/user">
+                            <li routerLinkActive="tabActive" [routerLinkActiveOptions]="{exact:true}"><i
+                                    class="fas fa-columns color-stateblue"></i> Dashboard </li>
+                        </a> -->
+                        <a href="#" routerLink="/user">
+                            <li routerLinkActive="tabActive" [routerLinkActiveOptions]="{exact:true}"><i
+                                    class="fas fa-tasks color-blue"></i> All Tasks</li>
+                        </a>
+                        <a href="#" routerLink="/user/pendingtasks">
+                            <li routerLinkActive="tabActive" [routerLinkActiveOptions]="{exact:true}"><i
+                                    class="fas fa-calendar-times color-darkred"></i> Pending Tasks
+                            </li>
+                        </a>
+                        <a href="#" routerLink="/user/completedtasks">
+                            <li routerLinkActive="tabActive" [routerLinkActiveOptions]="{exact:true}"><i
+                                    class="fas fa-calendar-check color-seagreen"></i> Completed Tasks</li>
+                        </a>
+                        <a href="#" routerLink="/user/profile">
+                            <li routerLinkActive="tabActive" [routerLinkActiveOptions]="{exact:true}"><i
+                                    class="fas fa-user color-orange"></i> User Profile</li>
+                        </a>
+                        <a href="#" routerLink="/user/changepassword">
+                            <li routerLinkActive="tabActive" [routerLinkActiveOptions]="{exact:true}"><i
+                                    class="fas fa-user-cog color-grey"></i> Privacy & Security</li>
+                        </a>
+                        <a href="#" routerLink="/user/contactus">
+                            <li routerLinkActive="tabActive" [routerLinkActiveOptions]="{exact:true}"><i
+                                    class="fas fa-phone color-green"></i> Contact Us</li>
+                        </a>
+                        <a *ngIf="auth.isLoggedIn()">
+                            <li routerLinkActive="tabActive" (click)="auth.logout()"><i
+                                    class="fas fa-sign-out-alt color-red"></i> Sign Out
+                            </li>
+                        </a>
+                    </ul>
+                </div>
+                <!-- Task Title End -->
+
+
+
+                <div class="col-md-10 task-detail">
+
+                    <div class="col-md-12">
+                        <app-header></app-header>
+                    </div>
+
+                    <router-outlet></router-outlet>
+
+                </div>
+
+
+
+
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,76 @@
+<div class="task-body">
+
+    <form [formGroup]="contactDetails" (ngSubmit)="contactus()">
+        <div class="heading" role="alert">
+            Contact Us
+            <a class="text-decoration-none mr-2 edit-profile float-right" href="javascript:void(0);"
+                (click)="cancelEditProfile()">
+                Cancel</a>
+            <button class="savebutton" type="submit" id="showBtn">Send Message</button>
+        </div>
+
+        <div class="bg-fff">
+            <div class="form-group row">
+                <label for="staticName" class="col-sm-2 col-form-label">Name</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" id="staticName" formControlName="name" required=""
+                        minlength="3" maxlength="25">
+                    <div class="validation-error"
+                        *ngIf="contactDetails.controls['name'].invalid &&(contactDetails.controls['name'].dirty ||contactDetails.controls['name'].touched)">
+                        <div *ngIf="contactDetails.controls['name'].errors.required">Please Fill The Box.</div>
+                        <div *ngIf="contactDetails.controls['name'].errors.minlength">Min Length is 3.</div>
+                        <div *ngIf="contactDetails.controls['name'].errors.maxlength">Max Length is 15.</div>
+                        <div *ngIf="contactDetails.controls['name'].errors.pattern">Enter Only Alphabets</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label for="staticEmail" class="col-sm-2 col-form-label">Email</label>
+                <div class="col-sm-10">
+                    <input type="email" class="form-control" id="staticEmail" formControlName="email" required="">
+                    <div class="validation-error"
+                        *ngIf="contactDetails.controls['email'].invalid &&(contactDetails.controls['email'].dirty ||contactDetails.controls['email'].touched)">
+                        <div *ngIf="contactDetails.controls['email'].errors.required">
+                            Please Fill The Box.
+                        </div>
+                        <div *ngIf="contactDetails.controls['email'].errors.pattern">
+                            Invalid Email.
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label for="staticSubject" class="col-sm-2 col-form-label">Subject</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" id="staticSubject" formControlName="subject" required=""
+                        minlength="5" maxlength="30">
+                    <div class="validation-error"
+                        *ngIf="contactDetails.controls['subject'].invalid &&(contactDetails.controls['subject'].dirty ||contactDetails.controls['subject'].touched)">
+                        <div *ngIf="contactDetails.controls['subject'].errors.required">Please Fill The Box.</div>
+                        <div *ngIf="contactDetails.controls['subject'].errors.minlength">Min Length is 5.</div>
+                        <div *ngIf="contactDetails.controls['subject'].errors.maxlength">Max Length is 30.</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label for="inputMessage" class="col-sm-2 col-form-label">Message</label>
+                <div class="col-sm-10">
+                    <textarea class="form-control" id="inputMessage" formControlName="message" required="" minlength="5"
+                        maxlength="200"></textarea>
+                    <div class="validation-error"
+                        *ngIf="contactDetails.controls['message'].invalid &&(contactDetails.controls['message'].dirty ||contactDetails.controls['message'].touched)">
+                        <div *ngIf="contactDetails.controls['message'].errors.required">Please Fill The Box.</div>
+                        <div *ngIf="contactDetails.controls['message'].errors.minlength">Min Length is 5.</div>
+                        <div *ngIf="contactDetails.controls['message'].errors.maxlength">Max Length is 200.</div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </form>
+
+
+</div>

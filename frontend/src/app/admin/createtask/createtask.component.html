@@ -1,0 +1,88 @@
+<div class="task-body">
+
+    <form [formGroup]="task" (ngSubmit)="createtask()">
+        <div class="heading" role="alert">
+            Create Task
+            <a class="text-decoration-none mr-2 edit-profile float-right" href="javascript:void(0);"
+                (click)="cancelEditProfile()">
+                Cancel</a>
+            <button class="savebutton" type="submit" id="showBtn">Create Task</button>
+        </div>
+
+        <div class="bg-fff">
+
+            <div class="form-group row">
+                <label for="inputEmployee" class="col-sm-2 col-form-label">To</label>
+                <div class="col-sm-10">
+                    <input list="name" class="form-control" id="inputEmployee" formControlName="fullname"
+                        name="employeeName">
+                    <datalist id="name">
+                        <option *ngFor="let empName of employeesDetails" value="{{empName.fullname}}">
+                            Name : {{empName.fullname}} | Username : {{empName.username}} </option>
+                    </datalist>
+                    <div class="validation-error"
+                        *ngIf="task.controls['fullname'].invalid &&(task.controls['fullname'].dirty ||task.controls['fullname'].touched)">
+                        <div *ngIf="task.controls['fullname'].errors.required">Please Fill The Box.</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label for="inputEmployeeUsername" class="col-sm-2 col-form-label">Username</label>
+                <div class="col-sm-10">
+                    <input list="username" class="form-control" id="inputEmployeeUsername" formControlName="username"
+                        name="empUsername">
+                    <datalist id="username">
+                        <option *ngFor="let empName of employeesDetails" value="{{empName.username}}">
+                            Name : {{empName.fullname}} | Username : {{empName.username}} </option>
+
+                    </datalist>
+                    <div class="validation-error"
+                        *ngIf="task.controls['username'].invalid &&(task.controls['username'].dirty ||task.controls['username'].touched)">
+                        <div *ngIf="task.controls['username'].errors.required">Please Fill The Box.</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label for="inputTaskTitle" class="col-sm-2 col-form-label">Title</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" id="inputTaskTitle" formControlName="taskName"
+                        name="taskname">
+                    <div class="validation-error"
+                        *ngIf="task.controls['taskName'].invalid &&(task.controls['taskName'].dirty ||task.controls['taskName'].touched)">
+                        <div *ngIf="task.controls['taskName'].errors.required">Please Fill The Box.</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label for="inputTaskDeadline" class="col-sm-2 col-form-label">Deadline</label>
+                <div class="col-sm-10">
+                    <input type="date" class="form-control" id="inputTaskDeadline" formControlName="deadline"
+                        name="deadline">
+                    <div class="validation-error"
+                        *ngIf="task.controls['deadline'].invalid &&(task.controls['deadline'].dirty ||task.controls['deadline'].touched)">
+                        <div *ngIf="task.controls['deadline'].errors.required">Please Fill The Box.</div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="form-group row">
+                <label for="inputDetail" class="col-sm-2 col-form-label">Detail</label>
+                <div class="col-sm-10">
+                    <textarea class="form-control" id="inputDetail" formControlName="taskDetail"
+                        name="taskDetail"></textarea>
+                    <div class="validation-error"
+                        *ngIf="task.controls['taskDetail'].invalid &&(task.controls['taskDetail'].dirty ||task.controls['taskDetail'].touched)">
+                        <div *ngIf="task.controls['taskDetail'].errors.required">Please Fill The Box.</div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </form>
+
+
+</div>

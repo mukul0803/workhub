@@ -1,0 +1,100 @@
+
+  .dashboard {
+    width: 70%;
+    margin-top: 52px !important;
+    padding: 13px;
+    float: left;
+  }
+
+  .task-info {
+    width: 100%;
+  }
+
+  .task-box {
+    width: 32%;
+    float: left;
+    /* border: 1px solid #aaa; */
+    padding: 10px;
+    margin: 5px;
+    box-shadow: 0 1px 15px rgba(0, 0, 0, 0.08), 0 1px 6px rgba(0, 0, 0, 0.08);
+    border-radius: 10px;
+  }
+
+  .task-box-left {
+    float: left;
+  }
+
+  .task-box-left p {
+    margin: 0;
+    font-size: 14px;
+    color: #fff;
+  }
+
+  .task-box-left span {
+    font-size: 35px;
+    font-weight: bold;
+    color: #fff;
+  }
+
+  .task-box-right {
+    float: right;
+  }
+
+  .task-box-right i {
+    font-size: 35px;
+    padding: 19px;
+    color: #fff;
+  }
+
+  .bg-clr-blue {
+    background-color: dodgerblue;
+  }
+
+  .bg-clr-red {
+    background-color: firebrick;
+  }
+
+  .bg-clr-green {
+    background-color: forestgreen;
+  }
+
+  /*notification*/
+  .task-chat {
+    float: left;
+    background: #fff;
+    width: 30%;
+    /* padding: 15px; */
+    padding-top: 42px !important;
+    height: 100%;
+    box-shadow: 0 1px 15px rgba(0, 0, 0, 0.08), 0 1px 6px rgba(0, 0, 0, 0.08);
+
+  }
+
+  .chat-heading {
+    background-color: #2f95ff;
+    color: #fff;
+    padding: 10px;
+  }
+
+  .chat-heading h6 {
+    margin: 0px;
+    margin-top: 10px !important;
+  }
+  
+  .notification {
+    padding: 10px;
+    height: 86%;
+    overflow: auto;
+  }
+
+
+  .notification p {
+    margin: 10px;
+    margin-bottom: 5px !important;
+    padding: 15px 5px;
+    background: #eee;
+    box-shadow: 0px 0px 10px -5px;
+  }
+
+
+  

@@ -1,0 +1,142 @@
+.home-box {
+    background-color: #fafafa;
+    padding-bottom: 0px;
+    padding-top: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+    vertical-align: middle;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+  }
+  
+  hr.hrColor {
+    border-color: rgba(119, 119, 119, 0.2);
+    margin-bottom: 20px;
+    margin-top: 18.5px;
+  }
+  
+  .taskTab {
+    padding: 0;
+    height: 100%;
+    display: inline-flex;
+    overflow: hidden;
+  }
+  
+  .task-title {
+    padding: 0px 0px;
+    border: none;
+    height: 100%;
+    overflow: auto;
+    background: #fff;
+    box-shadow: 8px 0px 20px -16px;
+    z-index: 9999;
+  }
+  
+  .task-title h6 {
+    color: #000;
+    font-weight: 18px;
+    padding: 15px 0px 0px 0px;
+    margin: 0px;
+    margin-bottom: 10px !important;
+  }
+  
+  .task-title ul {
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+  }
+  
+  .task-title li {
+    margin-bottom: 8px;
+    padding: 8px;
+    /* border-top: 1px solid #ddd; */
+    /* border-bottom: 1px solid #ddd; */
+    color: #000;
+    transition: all 0.3s;
+    background-color: transparent;
+    font-size: 14px;
+    /* font-weight: bold; */
+    transition: all .3s;
+  }
+
+  .color-stateblue {
+    color: slateblue;
+  }
+
+  .color-blue {
+    color:#007bff !important;
+  }
+
+  .color-red {
+    color: rgb(255, 82, 51);
+  }
+
+  .color-green {
+    color: forestgreen;
+  }
+
+  .color-orange {
+    color: orange;
+  }
+
+  .color-grey {
+    color: grey;
+  }
+
+  .color-seagreen {
+    color: lightseagreen;
+}
+
+.color-darkred {
+    color: darkred;
+}
+
+  
+  .task-title i {
+    margin-right: 8px;
+    width: 15px;
+    text-align: center;
+  }
+
+  .tabActive {
+    font-size: 16px !important;
+    border-left: 4px solid #000;
+    transition: all .3s;
+    font-weight: bold;
+  }
+  
+  .task-title a {
+    text-decoration: none;
+  }
+  
+  .task-detail {
+    /* overflow: auto; */
+    padding: 0px;
+    /* background-color: #fafafa; */
+  }
+ 
+  .task-head {
+    padding: 0px 10px;
+  }
+
+  .task-head input {
+    width: 100%;
+    background: #fff;
+    border: 1px solid #fff;
+    box-shadow: 0px 0px 5px -2px;
+    border-radius: 3px;
+    padding: 4px;
+    font-size: 14px;
+  }
+
+  .color-oranged {
+    color: orangered;
+}
+
+  .color-purple {
+    color: purple;
+  }

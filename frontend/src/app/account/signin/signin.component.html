@@ -1,0 +1,29 @@
+<div class="heading">
+    <h6>Login Form</h6>
+</div>
+<div class="loginForm">
+    <form [formGroup]="loginForm" (ngSubmit)="login()">
+
+        <span>Username or Email</span>
+        <input type="text" formControlName="email" name="email" required="" />
+        <div class="validation-error"
+            *ngIf="loginForm.controls['email'].invalid &&(loginForm.controls['email'].dirty ||loginForm.controls['email'].touched)">
+            <div *ngIf="loginForm.controls['email'].errors.required">Please Fill The Box.</div>
+        </div>
+
+        <span>Password</span>
+        <input type="password" formControlName="password" name="password" required="" />
+        <div class="validation-error"
+            *ngIf="loginForm.controls['password'].invalid &&(loginForm.controls['password'].dirty ||loginForm.controls['password'].touched)">
+            <div *ngIf="loginForm.controls['password'].errors.required">Please Fill The Box.</div>
+        </div>
+
+        <input type="submit" value="Login" />
+
+        <a routerLink="/forgetpassword">Forget Password?</a>
+        <hr />
+        <a href="#" routerLink="/signup" class="registerBtn">
+            Create an New Account
+        </a>
+    </form>
+</div>

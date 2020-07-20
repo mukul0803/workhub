@@ -1,0 +1,84 @@
+<div class="task-body">
+    <form [formGroup]="profileDetails" (ngSubmit)="updateProfile()">
+        <div class="heading" role="alert">
+            User Profile
+            <a class="text-decoration-none mr-2 edit-profile float-right" href="javascript:void(0);"
+                id="showEditProfile" (click)="editUserProfile()"> Edit Profile</a>
+            <a class="text-decoration-none mr-2 edit-profile float-right" href="javascript:void(0);" id="showCancel"
+                (click)="cancelEditProfile()">
+                Cancel</a>
+            <!-- <button class="savebutton" type="submit" id="showBtn">Save Changes</button> -->
+            <input type="submit" class="savebutton" id="showBtn" value="Save Changes">
+        </div>
+
+        <div class="bg-fff" *ngIf="details">
+            <div class="form-group row">
+                <label for="inputName" class="col-sm-2 col-form-label">Full Name</label>
+                <label for="inputName" class="col-sm-4 col-form-label">{{details.fullname}}</label>
+                <div class="col-sm-6" id="showInput1">
+                    <input type="text" class="form-control" id="inputName" formControlName="fullname">
+                    <div class="validation-error"
+                        *ngIf="profileDetails.controls['fullname'].invalid &&(profileDetails.controls['fullname'].dirty ||profileDetails.controls['fullname'].touched)">
+                        <div *ngIf="profileDetails.controls['fullname'].errors.required">Please Fill The Box.</div>
+                        <div *ngIf="profileDetails.controls['fullname'].errors.minlength">Min Length is 3.</div>
+                        <div *ngIf="profileDetails.controls['fullname'].errors.maxlength">Max Length is 15.</div>
+                        <div *ngIf="profileDetails.controls['fullname'].errors.pattern">Enter Only Alphabets</div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="inputUsername" class="col-sm-2 col-form-label">Username</label>
+                <label for="inputUsername" class="col-sm-4 col-form-label">{{details.username}}</label>
+                <div class="col-sm-6" id="showInput2">
+                    <input type="text" class="form-control" id="inputUsername" disabled>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="inputEmail3" class="col-sm-2 col-form-label">Email</label>
+                <label for="inputEmail3" class="col-sm-4 col-form-label">{{details.email}}</label>
+                <div class="col-sm-6" id="showInput3">
+                    <input type="email" class="form-control" id="inputEmail3" disabled>
+                </div>
+            </div>
+            <!-- <div class="form-group row">
+            <label for="inputNumber" class="col-sm-2 col-form-label">Phone Number</label>
+            <div class="col-sm-10">
+                <input type="number" class="form-control" id="inputNumber" [disabled]="editProfile"
+                    placeholder="9015551777">
+            </div>
+        </div> -->
+            <!-- <div class="form-group row">
+            <label for="inputAge" class="col-sm-2 col-form-label">Age</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="inputAge" disabled placeholder="08-03-2000">
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="inputGender" class="col-sm-2 col-form-label">Gender</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="inputGender" disabled placeholder="Male">
+            </div>
+        </div> -->
+
+            <!-- <div class="form-group row">
+            <label for="inputdesignation" class="col-sm-2 col-form-label">Designation</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="inputdesignation" [disabled]="editProfile"
+                    placeholder="Software Developer">
+            </div>
+        </div> -->
+
+
+
+            <!-- <div class="form-group row" id="showBtn">
+        <div class="col-sm-10">
+            <button type="submit" class="btn btn-primary">Save Changes</button>
+        </div>
+    </div> -->
+
+        </div>
+    </form>
+
+
+
+</div>

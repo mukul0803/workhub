@@ -1,0 +1,44 @@
+/* You can add global styles to this file, and also import other style files */
+
+/*FontAwesome Link*/
+@import "~@fortawesome/fontawesome-free/css/all.css";
+
+/* width */
+::-webkit-scrollbar {
+    width: 6px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #0000003d;
+    border-radius: 0px;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #2f95ff;
+    border-radius: 0px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #2f95ff;
+  }
+  
+  input:focus,
+  textarea:focus,
+  select:focus {
+    outline: none;
+  }
+  
+body {
+    background: url("./assets/images/balloon.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family: 'Lato', sans-serif !important;
+}
+
+.row {
+    margin-left: 0px !important;
+    margin-right: 0px !important;
+  }

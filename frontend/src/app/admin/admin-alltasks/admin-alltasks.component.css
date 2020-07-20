@@ -1,0 +1,38 @@
+.alltasks {
+    margin-top: 60px !important;
+    padding: 15px;
+}
+
+.heading {
+    width: 100%;
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px;
+    margin-bottom: 10px;
+    box-shadow: 0 1px 15px rgba(0, 0, 0, 0.08), 0 1px 6px rgba(0, 0, 0, 0.08);
+}
+
+.heading h6 {
+    margin: 0;
+    font-weight: bold;
+}
+
+.alltasks table {
+    width: 100%;
+    box-shadow: 0 1px 15px rgba(0, 0, 0, 0.08), 0 1px 6px rgba(0, 0, 0, 0.08);
+}
+
+.alltasks td:hover {
+    cursor: pointer;
+}
+
+.alltasks th {
+    color: rgba(0, 0, 0, 0.459);
+}
+
+.alltasks table,tr,th,td {
+    border-bottom: 1px solid #dedede;
+    padding: 10px;
+    background-color: #fff;
+
+}

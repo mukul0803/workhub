@@ -1,0 +1,68 @@
+<div class="task-body">
+
+    <form class="form-inline" [formGroup]="taskDetailForm" (ngSubmit)="updatestatus()">
+        <div class="heading" *ngIf="taskData">
+            <a class="text-decoration-none mr-2 back" href="#" routerLink="/user"> <i
+                    class="fas fa-long-arrow-alt-left"></i>
+            </a> {{taskData.taskName}}
+            <a class="text-decoration-none mr-2 edit-profile float-right" href="javascript:void(0);" id="showEditTask"
+                (click)="editTask()"> Edit Profile</a>
+            <a class="text-decoration-none mr-2 edit-profile float-right" href="javascript:void(0);" id="showCancel"
+                (click)="cancelTask()">
+                Cancel</a>
+            <button class="savebutton" type="submit" id="showBtn">Save Changes</button>
+        </div>
+
+        <div class="bg-fff">
+            <div class="task-title-detail" *ngIf="taskData">
+                <p> <b>Start Date : </b> {{taskData.taskStartDate | date:'dd/MM/yyyy'}} </p>
+                <p> <b>Deadline : </b> {{taskData.deadline | date:'dd/MM/yyyy'}} </p>
+                <p> <b>End Date : </b> {{taskData.taskEndDate | date:'dd/MM/yyyy'}} </p>
+
+
+                <label class="my-1 mr-2"><b>Status : </b>
+                    <span>{{taskData.status}}</span>
+                </label>
+
+                <select class="custom-select my-1 mr-sm-2" id="statusOption" formControlName="status">
+                    <option>Pending</option>
+                    <option>Completed</option>
+                </select>
+
+                <hr>
+
+
+                <p> <b>Details : </b> {{taskData.taskDetail}}
+                </p>
+
+            </div>
+        </div>
+    </form>
+
+</div>
+
+<div class="task-chat">
+    <div class="chat-heading">
+        <h6>Comments</h6>
+    </div>
+
+    <div class="user-chat">
+        <div class="alert alert-info p-2 mb-2" role="alert" *ngFor="let msgs of chatDetail">
+            <span>{{msgs.name}}</span>
+            <p>{{msgs.comment}}</p>
+        </div>
+
+    </div>
+
+    <form [formGroup]="chat" (ngSubmit)="updateChat()">
+        <div class="chat-input">
+            <input type="text" placeholder="Message" formControlName="comment">
+            <input type="submit" value="Send">
+            <div class="validation-error"
+                *ngIf="chat.controls['comment'].invalid &&(chat.controls['comment'].dirty ||chat.controls['comment'].touched)">
+                <div *ngIf="chat.controls['comment'].errors.required">Please Fill The Box.</div>
+            </div>
+        </div>
+    </form>
+
+</div>

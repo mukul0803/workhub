@@ -1,0 +1,27 @@
+<div class="alltasks">
+
+    <div class="heading">
+        <h6>Employees Profile</h6>
+    </div>
+
+    <table>
+        <tr>
+            <th>Employee Name</th>
+            <th>Employee Username</th>
+            <!-- <th>Designation</th> -->
+            <th>Email</th>
+            <!-- <th>Phone Number</th> -->
+
+        </tr>
+
+        <tr *ngFor="let emp of employeesDetails">
+            <td> {{emp.fullname}} </td>
+            <td> {{emp.username}} </td>
+            <!-- <td> </td> -->
+            <td> {{emp.email}} </td>
+            <!-- <td> </td> -->
+
+        </tr>
+
+    </table>
+</div>
